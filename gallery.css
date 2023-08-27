@@ -1,0 +1,234 @@
+#body-double {
+    background-image: url("assets/odin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+body {
+    display: flex;
+    background-color: rgba(0, 0, 0, 1);
+    /* background-blend-mode:lighten; */
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+h1{
+    margin: 6vh;
+    color: white;
+    font-family: 'Odin';
+    font-size: xxx-large;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gallerySection{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+.img-zoom-container {
+    position: relative;
+}
+
+#cnvs{
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid white;
+}
+
+.img-zoom-result {
+    width: 100%;
+    height: 100%;
+}
+
+div.gallery {
+    margin: 1vw;
+    border: 1px solid #ccc;
+    width: 15vw;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    color: white;
+    font-family: 'Norse';
+    padding: 1vw;
+    text-align: center;
+}
+
+
+/* chestiuni ce tin de meniu */
+
+
+footer {
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    min-height: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header * {
+    overflow: visible;
+}
+
+
+header img {
+    width: 8vw;
+    position: absolute;
+}
+
+header {
+    padding-top: 10vh;
+    text-transform: capitalize;
+    font-family: "Odin";
+    font-size: x-large;
+}
+
+header ul {
+    list-style: none;
+}
+
+header a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+
+header a:hover,
+header a:visited:hover {
+    color: aquamarine;
+}
+
+header a:visited {
+    color: rosybrown;
+}
+
+#logo :hover {
+    animation: rotate-horizontal 5s infinite;
+}
+
+.dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    margin-top: 2em;
+    position: fixed;
+    background-color: black;
+    border-radius: 1vw;
+    min-width: inherit;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    font-family: 'Norse';
+    text-decoration: none;
+    display: block;
+    justify-self: center;
+    font-size: medium;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+.dropdown-content a:hover {
+    background-color: darkslategray;
+}
+
+.dropdown-wrapper:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-wrapper:hover button {
+    background-color: #3e8e41;
+}
+
+#section-3 {
+    background-color: black;
+    background-image: url("assets/valkyrie.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-5 {
+    background-color: black;
+    background-image: url("assets/vapor.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-3>*,
+#section-5>* {
+    margin-top: 5vh;
+}
+
+@media (min-width: 10em) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1em;
+    }
+
+    header ul {
+        display: flex;
+        align-items: center;
+    }
+
+    header li a {
+        border-width: 0;
+    }
+}
+
+@font-face {
+    font-family: "Norse";
+    src: url("fonts/NorseBold-2Kge.otf");
+}
+
+@font-face {
+    font-family: "Odin";
+    src: url("fonts/Odinson-224w.ttf");
+}

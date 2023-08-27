@@ -1,0 +1,538 @@
+@font-face {
+    font-family: "Norse";
+    src: url("fonts/NorseBold-2Kge.otf");
+}
+
+@font-face {
+    font-family: "Odin";
+    src: url("fonts/Odinson-224w.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header *{
+    overflow: visible;
+}
+
+
+header img{
+    width: 8vw;
+    position:absolute;
+}
+
+body{
+    background-image: url("assets/padure.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode:multiply;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    background-attachment: fixed;
+}
+section p{
+    color: white;
+}
+
+header{
+    padding-top: 10vh;
+    text-transform: capitalize;
+    font-family: "Odin";
+    font-size: x-large;
+}
+header ul{
+    list-style: none;
+}
+header a{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 0.5em 1em;
+}
+header a:hover, header a:visited:hover{
+    color: aquamarine;
+}
+
+header a:visited{
+    color: rosybrown;
+}
+section{
+    min-height: fit-content;
+    min-width: 100vw;
+}
+
+#section-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 50vh;
+}
+
+#section-1 > img{
+    border-radius: 1em;
+    box-shadow: 10px 10px 10px 10px black;
+}
+
+
+
+.roundGreenButton{
+    border-radius: 1em;
+    background-color: goldenrod;
+    color: darkslategray;
+    min-height: fit-content;
+    height: 2em;
+    min-width: fit-content;
+    width: 4em;
+    font-family: "Odin";
+    font-size: large;
+}
+
+footer{
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    min-height: 3em;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+main section:nth-of-type(2n){
+    /* margin-top: 2vh; */
+    border-style: solid;
+    border-color: rgb(68, 18, 18);
+    border-width: 1px 0px;
+    background-image: url("assets/lemn.jpg");
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: darken;
+}
+
+main section:nth-of-type(2n+1){
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+@media (min-width: 10em) {
+    .sec1-minimotto{
+        visibility: hidden;
+    }
+    header {
+        display: flex;
+        justify-content:space-around;
+        align-items:center;
+        margin: 1em;
+    }
+    header ul {
+        display: flex;
+        align-items: center;
+    }
+    header li a {
+        border-width: 0;
+    }
+    #section-1 > img{
+        margin-top: 2vh;
+        min-width: auto;
+        border-radius: 2vw;
+        width: min(90vh, 90vw);
+    }
+    .image-sec2{
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 80em) {
+    #section-1 > img{
+        width: 45vw;
+    }
+    .sec1-minimotto{
+        visibility: visible;
+    }
+    .image-sec2{
+        visibility: visible;
+    }
+}
+
+#section-1 > div{
+    margin-left: 22%;
+}
+
+.table {
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 70%;
+    gap: 1em;
+    align-items: end;
+    max-height: 60vh;
+}
+  
+.sec1-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    border-radius: 2vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.sec1-minimotto {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: "Norse";
+}
+.sec1-largemotto{
+    color: white;
+    font-family: "Norse";
+    font-size: xx-large;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+.sec1-description{
+    font-family: "Norse";
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+.sec1-button{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    align-self: flex-start;
+}
+
+
+.table-sec2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    width: 10%;
+    min-width: 12vw;
+    background-color: #1c2f3d;
+    border: 4px solid black;
+    padding: 0.5em;
+    border-radius: 5%;
+}
+
+.image-sec2{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    justify-self: center;
+    height: 100%;
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1em;
+}
+
+.header-sec2{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    font-family: "Norse";
+    color: white;
+    font-size: x-large;
+    overflow: visible;
+    align-self: center;
+}
+
+.par-sec2{
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    color: white;
+    font-family: "Norse";
+    font-size: medium;
+    align-self: start;
+}
+
+#section-2 > div{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#section-4{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#section-4 > h2{
+    margin-top: 1%;
+    font-size: xxx-large;
+    color: white;
+    font-family: "Norse";
+    margin-bottom: 1%;
+}
+
+#section-4 button{
+    align-self: center;
+    border-radius: 1em;
+    background-color: goldenrod;
+    color: darkslategray;
+    min-height: fit-content;
+    height: 1.5em;
+    min-width: fit-content;
+    width: 8em;
+    font-family: "Odin";
+    font-size: xx-large;
+}
+
+#section-3{
+    background-color: black;
+    background-image: url("assets/valkyrie.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-5{
+    background-color: black;
+    background-image: url("assets/vapor.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.fly {
+    animation: fly 1s infinite;
+}
+  
+@keyframes fly {
+    0% {
+        transform: translateY(0) scaleX(1);
+        border: none;
+    }
+    10% {
+        transform: translateY(-1vh) scaleX(0.9);
+        border-top: 0.2vw solid gold;
+        border-right: 0.2vw solid gold;
+        border-left: 0.2vw solid gold;
+        border-radius: 50%;
+        
+    }
+    20% {
+        transform: translateY(-2vh) scaleX(0.8);
+        border-top: 0.1vw solid gold;
+        border-right: 0.1vw solid gold;
+        border-left: 0.1vw solid gold;
+        border-radius: 50%;
+        
+    }
+    30% {
+        transform: translateY(-3vh) scaleX(0.7);
+        border-top: 0.05vw solid gold;
+        border-right: 0.05vw solid gold;
+        border-left: 0.05vw solid gold;
+        border-radius: 50%;
+        
+    }
+    40% {
+        border-top: none;
+        transform: translateY(-4vh) scaleX(0.6);
+        border-right: none;
+        border-left: none;
+        
+    }
+    50% {
+        transform: translateY(-5vh) scaleX(0.5);
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        
+    }
+    60% {
+        transform: translateY(-4vh) scaleX(0.6);
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        
+    }
+    70% {
+        transform: translateY(-3vh) scaleX(0.7);
+        border-top: 0.05vw solid gold;
+        border-right: 0.05vw solid gold;
+        border-left: 0.05vw solid gold;
+        border-radius: 50%;
+        
+    }
+    80% {
+        transform: translateY(-2vh) scaleX(0.8);
+        border-top: 0.1vw solid gold;
+        border-right: 0.1vw solid gold;
+        border-left: 0.1vw solid gold;
+        border-radius: 50%;
+        
+    }
+    90% {
+        transform: translateY(-1vh) scaleX(0.9);
+        border-top: 0.2vw solid gold;
+        border-right: 0.2vw solid gold;
+        border-left: 0.2vw solid gold;
+        border-radius: 50%;
+        
+    }
+    100% {
+        transform: translateY(0) scaleX(1);
+        border-top:none;
+        border-right:none;
+        border-left:none;
+        
+     }
+}
+
+
+.item-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4vh;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:18vw;
+    padding: 0.5vw;
+}
+  
+.product-image {
+    width: 14vw;
+    height: 14vw;
+    border-radius: 1em;
+}
+  
+.product-title {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: 0.5vw;
+    color: white;
+    font-family: "Norse";
+}
+  
+.rating {
+    align-self: center;
+    font-size: 1.5vw;
+    color: gold;
+}
+  
+.product-price {
+    font-size: 1.2vw;
+}
+  
+.old-price {
+    text-decoration: line-through;
+}
+
+.new-price {
+    color: green;
+}
+
+#section-3 > *, #section-5 > *{
+    margin-top: 5vh;
+}
+
+#section-3 > h2, #section-5 > h2{
+    font-size: xxx-large;
+    align-self: center;
+    color: white;
+    font-family: "Norse";
+}
+
+#section-3 > img, #section-5 > img{
+    align-self: center;
+    width: 10vw;
+}
+
+.testimonial {
+    background-color: black;
+    color: white;
+    border: 0.1vw solid white;
+    padding: 0.5vw;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-description {
+    font-size: 1.2vw;
+}
+  
+.person-name {
+    margin-top: 2vh;
+    font-size: 1vw;
+    font-style: italic;
+    align-self: flex-end;
+}
+
+.person-list{
+    justify-content: space-evenly;
+}
+
+@keyframes rotate-horizontal {
+
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+}
+
+#logo :hover{
+    animation: rotate-horizontal 5s infinite;
+}
+
+.dropdown-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content{
+    display: none;
+    flex-direction: column ;
+    margin-top: 2em;
+    position:fixed;
+    background-color: black;
+    border-radius: 1vw;
+    min-width: inherit;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    color: white;
+    font-family: 'Norse';
+    text-decoration: none;
+    display: block;
+    justify-self: center;
+    font-size: medium;
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+.dropdown-content a:hover{
+    background-color: darkslategray;
+}
+
+.dropdown-wrapper:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-wrapper:hover button{
+    background-color: #3e8e41;
+}

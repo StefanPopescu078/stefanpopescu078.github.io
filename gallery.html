@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div id="body-double">
+        <header id="header">
+            <div id="logo">
+                <img src="assets/logoWhite.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown-wrapper">
+                        <a href="index.html">Home</a>
+                        <div class="dropdown-content">
+                            <a href="index.html#section-3">Trending</a>
+                            <a href="index.html#section-5">Testimonials</a>
+                        </div>
+                    </li>
+                    <li><a href="gallery.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Produsele noastre</h1>
+            <div id="gallerySection">
+                <div class="gallery">
+                    <img src="assets/coaste.jpg" width="600" height="400" id="coaste" alt="coaste">
+                    <div class="desc">Costite de porc</div>
+                </div>
+
+                <div class="gallery">
+                    <img src="assets/snitel.png" width="600" height="400" id="snitel" alt="snitel">
+                    <div class="desc">Snitel vienez</div>
+                </div>
+
+                <div class="gallery">
+                    <img src="assets/pastrav.jpg" width="600" height="400" id="pastrav" alt="pastrav">
+                    <div class="desc">Pastrav la gratar</div>
+                </div>
+
+                <div class="gallery">
+                    <img src="assets/mici.jpg" width="600" height="400" id="mici" alt="mici">
+                    <div class="desc">Mici suculenti</div>
+                </div>
+            </div>
+
+            <div class="img-zoom-container">
+                <canvas id="cnvs" width="600" height="600" class="img-zoom-result"></canvas>
+            </div>
+            <script src="gallery.js"></script>
+            <script>
+                imageZoom("cnvs");
+            </script>
+        </main>
+    </div>
+    <footer id="footer">
+        <p>&copy; Popescu Stefan's Valhalla vision demo. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
